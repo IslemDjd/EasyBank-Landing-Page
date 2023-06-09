@@ -1,0 +1,135 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Concert One', cursive;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body{
+    background-color: rgb(248, 248, 248);
+}
+
+.frame{
+    width: 100%;
+    /* background-color: red; */
+}
+
+nav{
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    /* box-shadow: 1px 0px 50px black; */
+}
+
+.nav-btn{
+    width: 40%;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btns li{
+    display: flex;
+    align-items: center;
+    flex-direction: column;   
+    justify-content: space-between; 
+    list-style: none;
+    height: 70px;
+    /* border: 2px solid green; */
+}
+li div{
+    width: 100%;
+    height: 3px;
+}
+li span{
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right,hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+    opacity: 0;
+}
+
+.btns a{
+    text-decoration: none;
+    color: hsl(233, 8%, 62%);
+}
+
+.request-invite{
+    width: 130px;
+    height: 40px;
+    border-radius: 2em;
+    border: 0;
+    background: linear-gradient(to right,hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+    color: white;
+    font-weight: 700;
+}
+
+.request-invite:hover{
+    background: linear-gradient(to right,hsl(136, 65%, 51%,0.7),hsl(192, 70%, 51%,0.7));
+    
+}
+
+.toggle{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: none;
+
+}
+
+
+@media screen and (max-width: 700px) {
+    .toggle{
+        display: block;
+    }
+    
+    .nav-btn{
+        display: none;
+    }
+    .request-invite{
+        display: none;
+    }
+
+    .logo{
+        position: absolute;
+        top: 20px;
+        left: 30px;
+    }
+    
+    .active{
+        display: block;
+        
+    }
+    
+    .btns{
+        position: absolute;
+        /* margin-top: 470px; */
+        display: block;
+        width: 80%;
+        /* margin:0 auto; */
+        left: 10%;
+        top: 90px;
+        z-index: 999;
+        background-color: rgb(255, 255, 255);
+        border-radius: 0.5em;
+    }
+    
+    .btns a{
+        color: black;
+    }
+    
+    
+    
+}
+
+.interface{
+    z-index: 1;
+    height: 20000px;
+}
