@@ -125,95 +125,247 @@ li span{
     position: absolute;
     z-index: -1;
     top: -25%;
-    left: 45%;
+    left: 40%;
     height: 900px;
 }
 
 
 
-@media screen and (max-width: 700px) {
-    .toggle{
-        display: block;
-    }
-    
-    .nav-btn{
-        display: none;
-    }
-    .navBt{
-        display: none;
-    }
 
-    .logo{
-        position: absolute;
-        top: 20px;
-        left: 30px;
-    }
-    
-    .active{
-        display: block;
-        
-    }
-    
-
-    .activeInterface{
-        box-shadow: inset 0px 500px 50px rgba(0, 0, 0, 0.5)
-    }
-    
-    .btns{
-        position: absolute;
-        display: block;
-        width: 80%;
-        left: 10%;
-        top: 90px;
-        z-index: 999;
-        background-color: rgb(255, 255, 255);
-        border-radius: 0.5em;
-        /* box-shadow: 0px 0px  1000px black; */
-    }
-    
-    .btns a{
-        color: black;
-    }
-    
-    .interface{
-        flex-direction: column-reverse; 
-    }
-
-    .right{
-        background-image: url(images/bg-intro-mobile.svg);
-        width: 100%;
-        background-size: cover;
-        z-index: -1;
-    }
-    
-    .right svg{
-        display: none;
-    }
-
-    .right img{
-        position:static;
-        width: 100%;
-        
-        
-    }
-    
-    .left{
-        margin-left: 0;
-        width: 100%;
-        align-items: center;
-        text-align: center;
-    }
-
-    .left h1{
-        width: 90%;
-    }
-    
-    .left p{
-        width: 90%;
-    }
-    
-    
-    
-    
+.why{
+    width: 100%;
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    margin-left: 5%;
     
 }
+
+.why h2{
+    width: 80%;
+    font-size: 32px;
+    font-weight: 400;
+}
+.why p{
+    width: 40%;
+    font-size: 15px;
+    color: hsl(233, 8%, 62%);
+    
+}
+
+.services{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.services h2{
+    width: 70%;
+    font-size: 25px;
+    font-weight: 500;
+}
+.services h2{
+    width: 70%;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.services p{
+    width: 60%;
+    font-size: 15px;
+    color: hsl(233, 8%, 62%);
+    
+}
+
+.article{
+    width: 100%;
+}
+
+.latest-article h2{
+    width: 70%;
+    margin-left: 70px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+.article-pic{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    text-align:start;
+    
+}
+
+.article-pic div{
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 251, 246);
+    border-radius: 1em;
+}
+
+.article-pic img{
+    width: 100%;
+    height: 200px;
+}
+
+.article-pic h2{
+    width: 90%;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.article-pic p{
+    width: 90%;
+    font-size: 15px;
+    color: hsl(233, 8%, 62%);
+    
+}
+
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: hsl(233, 26%, 24%);
+}
+
+
+
+
+
+    @media screen and (max-width: 700px) {
+        .toggle{
+            display: block;
+        }
+        
+        .nav-btn{
+            display: none;
+        }
+        .navBt{
+            display: none;
+        }
+    
+        .logo{
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+        
+        .active{
+            display: block;
+            
+        }
+        
+    
+        .activeInterface{
+            box-shadow: inset 0px 500px 50px rgba(0, 0, 0, 0.5)
+        }
+        
+        .btns{
+            position: absolute;
+            display: block;
+            width: 80%;
+            left: 10%;
+            top: 90px;
+            z-index: 999;
+            background-color: rgb(255, 255, 255);
+            border-radius: 0.5em;
+            /* box-shadow: 0px 0px  1000px black; */
+        }
+        
+        .btns a{
+            color: black;
+        }
+        
+        .interface{
+            flex-direction: column-reverse; 
+        }
+    
+        .right{
+            background-image: url(images/bg-intro-mobile.svg);
+            width: 100%;
+            background-size: cover;
+            z-index: -1;
+        }
+        
+        .right svg{
+            display: none;
+        }
+    
+        .right img{
+            position:static;
+            width: 100%;
+            
+            
+        }
+        
+        .left{
+            margin-left: 0;
+            width: 100%;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .left h1{
+            width: 90%;
+        }
+        
+        .left p{
+            width: 90%;
+        }
+    
+        .why{
+            margin-left: 0;
+            margin-top: 100px;
+            align-items: center;
+            text-align: center;
+        }
+        .why h2{
+            width: 90%;
+        }
+        .why p{
+            width: 90%;
+    
+        }
+
+        .services{
+
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            /* justify-content: center; */
+            /* align-items: center; */
+        }
+
+        .services h2{
+            width: 90%;
+            margin: auto;
+        }
+
+        .services p{
+            width: 90%;
+            margin: auto;
+        }
+
+        .latest-article{
+            width: 90%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .latest-article h2{
+            margin-left: 0;
+            width: 100%;
+        }
+
+        .article-pic{
+            flex-direction: column;
+        }
+        .article-pic div{
+            width: 100%;
+        }
+          
+    }
