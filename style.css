@@ -15,10 +15,14 @@ body{
 
 .frame{
     width: 100%;
-    /* background-color: red; */
+   
 }
 
 nav{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 100;
     height: 70px;
     display: flex;
     justify-content: space-around;
@@ -45,6 +49,7 @@ nav{
     height: 70px;
     /* border: 2px solid green; */
 }
+
 li div{
     width: 100%;
     height: 3px;
@@ -85,6 +90,47 @@ li span{
 }
 
 
+
+.interface{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;    
+}
+
+.left{
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    margin-left: 5%;
+    width: 40%;
+}
+
+.left h1{
+    width: 80%;
+    font-size: 40px;
+    font-weight: 400;
+}
+.left p{
+    width: 80%;
+    font-size: 15px;
+    color: hsl(233, 8%, 62%);
+    
+}
+
+.right{
+    width: 50%;
+}
+
+.right svg{
+    position: absolute;
+    z-index: -1;
+    top: -25%;
+    left: 45%;
+    height: 900px;
+}
+
+
+
 @media screen and (max-width: 700px) {
     .toggle{
         display: block;
@@ -93,7 +139,7 @@ li span{
     .nav-btn{
         display: none;
     }
-    .request-invite{
+    .navBt{
         display: none;
     }
 
@@ -108,28 +154,66 @@ li span{
         
     }
     
+
+    .activeInterface{
+        box-shadow: inset 0px 500px 50px rgba(0, 0, 0, 0.5)
+    }
+    
     .btns{
         position: absolute;
-        /* margin-top: 470px; */
         display: block;
         width: 80%;
-        /* margin:0 auto; */
         left: 10%;
         top: 90px;
         z-index: 999;
         background-color: rgb(255, 255, 255);
         border-radius: 0.5em;
+        /* box-shadow: 0px 0px  1000px black; */
     }
     
     .btns a{
         color: black;
     }
     
-    
-    
-}
+    .interface{
+        flex-direction: column-reverse; 
+    }
 
-.interface{
-    z-index: 1;
-    height: 20000px;
+    .right{
+        background-image: url(images/bg-intro-mobile.svg);
+        width: 100%;
+        background-size: cover;
+        z-index: -1;
+    }
+    
+    .right svg{
+        display: none;
+    }
+
+    .right img{
+        position:static;
+        width: 100%;
+        
+        
+    }
+    
+    .left{
+        margin-left: 0;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left h1{
+        width: 90%;
+    }
+    
+    .left p{
+        width: 90%;
+    }
+    
+    
+    
+    
+    
 }
