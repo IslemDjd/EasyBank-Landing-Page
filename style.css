@@ -7,10 +7,12 @@
     padding: 0;
     font-family: 'Concert One', cursive;
     font-family: 'Hanken Grotesk', sans-serif;
+    list-style: none;
 }
 
 body{
     background-color: rgb(248, 248, 248);
+    overflow-x: hidden;
 }
 
 .frame{
@@ -87,6 +89,13 @@ li span{
     right: 30px;
     display: none;
 
+}
+
+#close{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: none;
 }
 
 
@@ -216,6 +225,10 @@ li span{
     width: 90%;
     font-size: 25px;
     font-weight: 400;
+    &:hover{
+        color: hsl(136, 52%, 47%);
+        cursor: pointer;
+    }
 }
 
 .article-pic p{
@@ -227,9 +240,89 @@ li span{
 
 footer{
     width: 100%;
-    height: 200px;
     background-color: hsl(233, 26%, 24%);
 }
+
+.footer-menu{
+    padding-top: 50px;
+    /* height: 200px; */
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links{
+    width: 25%;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.links div ul{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-between;
+
+
+}
+
+.links a{
+    color: hsl(233, 8%, 62%);
+    text-decoration: none;
+}
+
+.links a:hover{
+    color: hsl(136, 65%, 51%);
+
+}
+
+
+
+.social{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.social-media{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.social-media div{
+    width: 10px;
+}
+
+.social-media svg{
+    fill: white;
+}
+
+.btn{
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.btn p{
+    font-size: 15px;
+    color: hsl(233, 8%, 62%);
+    
+}
+
+.logo-footer{
+    fill: white;
+}
+
+
 
 
 
@@ -260,21 +353,39 @@ footer{
         
     
         .activeInterface{
-            box-shadow: inset 0px 500px 50px rgba(0, 0, 0, 0.5)
+            box-shadow: inset 0px 500px 50px rgba(0, 0, 0, 0.5);
+        
         }
+
         
         .btns{
             position: absolute;
             display: block;
             width: 80%;
             left: 10%;
-            top: 90px;
+            top: -350px;
             z-index: 999;
             background-color: rgb(255, 255, 255);
             border-radius: 0.5em;
             /* box-shadow: 0px 0px  1000px black; */
+            animation: Drop 0.1s linear ;
+            animation-iteration-count: 1;
+            top: 90px;
         }
         
+        @keyframes Drop {
+            0%   {top:-200px;}
+            10%   {top:-170px;}
+            20%   {top:-140px;}
+            30%   {top:-110px;}
+            40%   {top:-80px;}
+            50%   {top:-50px;}
+            60%   {top:-20px;}
+            70%   {top:10px;}
+            80%   {top:30px;}
+            90%   {top:60px;}
+            100%  {top:90px;}
+        }
         .btns a{
             color: black;
         }
@@ -366,6 +477,40 @@ footer{
         }
         .article-pic div{
             width: 100%;
+        }
+
+        .footer-menu{
+            flex-direction: column;
+            height: 600px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .social{
+            align-items: center;
+        }
+
+        .links{
+            width: 90%;
+            height: 270px;
+            flex-direction: column;
+        }
+
+        .links div{
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            font-size: 20px;
+        }
+
+        .links div ul{
+            height: 120px;
+            width: 100%;
+            margin: auto;
+        }
+
+        .btn{
+            align-items: center;
         }
           
     }
